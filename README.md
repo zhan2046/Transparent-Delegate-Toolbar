@@ -1,0 +1,2 @@
+# TransparentToolBar
+TransparentToolBar 一个简单随着滚动控件滚动，不断改变颜色透明度的ToolBar
