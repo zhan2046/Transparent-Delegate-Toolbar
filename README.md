@@ -2,9 +2,11 @@
 <!--lang: java-->
 ####效果如图：
 
-![](https://github.com/ruzhan123/TransparentToolBar/raw/master/gif/toolbar.gif)
+![](https://github.com/ruzhan123/TransparentToolBar/raw/master/gif/toolbar01.gif)
 
 </br>
+
+我的博客：[详解](https://ruzhan123.github.io/2016/07/03/2016-07-03-19-TransparentToolBar/)
 
 
 TransparentToolBar 一个简单随着滚动控件滚动，不断改变颜色透明度的ToolBar。核心类就一个：TransparentToolBar.java
@@ -103,7 +105,7 @@ setOffset   为ToolBar滚动控件滚动，ToolBar透明度变化范围的计算
 
 ```
 
-4，可以设置ToolBar setOnScrollStateListener，获取ToolBar跟随滚动控件计算出的百分比0~1，用于同步一些子View属性动画之类的
+4，可以设置ToolBar setOnScrollStateListener，获取ToolBar跟随滚动控件计算出的百分比0~1，用于同步一些View动画
 
 ```java
 
