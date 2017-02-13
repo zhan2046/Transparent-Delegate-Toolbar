@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import zhan.transparent.OnTransparentListener;
 import zhan.transparent.widget.TransparentFrameLayout;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
   private RecyclerView mRecyclerView;
   private TextView numTv;
 
+  private ImageView picIv;
   private TextView titleTv;
   private View line;
 
@@ -48,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
       @Override public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
         super.onScrolled(recyclerView, dx, dy);
-
         mDy += dy;
         mTransparentFrameLayout.updateTop(mDy);
       }
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
       @Override public void onTransparentEnd(float fraction) {  //scroll to max offset
         if (titleTv.getVisibility() == View.GONE) {
           titleTv.setVisibility(View.VISIBLE);
+          picIv.setVisibility(View.VISIBLE);
           line.setVisibility(View.VISIBLE);
         }
       }
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (titleTv.getVisibility() == View.VISIBLE && fraction < 1) {
           titleTv.setVisibility(View.GONE);
+          picIv.setVisibility(View.GONE);
           line.setVisibility(View.GONE);
         }
       }
@@ -82,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
     mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
     numTv = (TextView) findViewById(R.id.num_tv);
     titleTv = (TextView) findViewById(R.id.title_tv);
+    picIv = (ImageView) findViewById(R.id.pic_iv);
     line = findViewById(R.id.line);
   }
 }

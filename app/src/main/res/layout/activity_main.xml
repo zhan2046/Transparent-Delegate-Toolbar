@@ -21,16 +21,35 @@
             android:layout_height="match_parent"
             >
 
-            <TextView
-                android:id="@+id/title_tv"
-                android:textSize="16sp"
-                android:textColor="@android:color/white"
-                android:text="smile"
-                android:visibility="gone"
+            <LinearLayout
                 android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                >
+                <ImageView
+                    android:id="@+id/pic_iv"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/avatar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    />
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:text="smile"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
 
             <View
                 android:id="@+id/line"
@@ -44,9 +63,9 @@
 
     <TextView
         android:id="@+id/num_tv"
-        android:textSize="33sp"
+        android:textSize="30sp"
         android:maxLength="6"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorPrimary"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
