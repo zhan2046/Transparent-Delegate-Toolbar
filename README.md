@@ -24,7 +24,7 @@ TransparentToolBar是RelativeLayout的子类，里面想放什么子View随意�
 
 ```java
 
-	    <com.zhan.transparenttoolbar.widget.TransparentToolBar
+	    <zhan.transparent.widget.TransparentToolBar
 	        android:id="@+id/main_bar"
 	        android:layout_width="match_parent"
 	        android:layout_height="55dp">
@@ -44,7 +44,7 @@ TransparentToolBar是RelativeLayout的子类，里面想放什么子View随意�
 	            android:layout_alignParentBottom="true"
 	            android:background="@android:color/black" />
 	
-	    </com.zhan.transparenttoolbar.widget.TransparentToolBar>
+	    </zhan.transparent.widget.TransparentToolBar>
 
 
 ```
