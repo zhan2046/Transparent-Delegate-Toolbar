@@ -12,7 +12,8 @@ Screenshots
 
 Transparent-Delegate-Toolbar use **Delegate** finish scroll change color to alpha
 
-[![](https://jitpack.io/v/ruzhan123/Transparent-Delegate-Toolbar.svg)](https://jitpack.io/#ruzhan123Transparent-Delegate-Toolbar)
+[![](https://jitpack.io/v/ruzhan123/Transparent-Delegate-Toolbar.svg)](https://jitpack.io/#ruzhan123/Transparent-Delegate-Toolbar)
+
 
 Gradle
 ------
@@ -147,7 +148,7 @@ expand
 Developed by
 -------
 
- ruzhan - <a href='javascript:'>ruzhan333@gmail.com</a>
+ ruzhan - <a href='javascript:'>dev19921116@gmail.com</a>
 
 
 License
