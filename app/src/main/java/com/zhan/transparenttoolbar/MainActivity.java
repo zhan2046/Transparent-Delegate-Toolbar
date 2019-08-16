@@ -1,12 +1,14 @@
 package com.zhan.transparenttoolbar;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import zhan.transparent.OnTransparentListener;
 import zhan.transparent.widget.TransparentFrameLayout;
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
   private void initData() {
     LinearLayoutManager manager =
-        new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
     mRecyclerView.setLayoutManager(manager);
 
     mMyAdapter = new MyAdapter();

@@ -1,12 +1,10 @@
 package com.zhan.transparenttoolbar;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
-/**
- * Created by zhan on 2017/2/14.
- */
+import androidx.recyclerview.widget.RecyclerView;
+
 
 public class MyHeaderHolder extends RecyclerView.ViewHolder {
 
