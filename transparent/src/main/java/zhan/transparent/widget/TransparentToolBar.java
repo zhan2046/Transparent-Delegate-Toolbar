@@ -1,15 +1,15 @@
 package zhan.transparent.widget;
 
 import android.content.Context;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.Toolbar;
+
 import zhan.transparent.ITransparentDelegate;
 import zhan.transparent.OnTransparentListener;
 import zhan.transparent.TransparentDelegate;
 
-/**
- * Created by hrz on 2016/7/3.
- */
+
 public class TransparentToolBar extends Toolbar implements ITransparentDelegate {
 
   private TransparentDelegate mTransparentDelegate;

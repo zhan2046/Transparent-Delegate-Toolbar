@@ -7,9 +7,7 @@ import zhan.transparent.ITransparentDelegate;
 import zhan.transparent.OnTransparentListener;
 import zhan.transparent.TransparentDelegate;
 
-/**
- * Created by hrz on 2016/7/3.
- */
+
 public class TransparentRelativeLayout extends RelativeLayout implements ITransparentDelegate {
 
   private TransparentDelegate mTransparentDelegate;

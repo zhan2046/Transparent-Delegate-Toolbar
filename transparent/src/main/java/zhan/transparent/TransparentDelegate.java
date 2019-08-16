@@ -6,9 +6,6 @@ import android.view.ViewTreeObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by zhan on 2017/2/13.
- */
 
 public class TransparentDelegate
     implements ViewTreeObserver.OnGlobalLayoutListener, ITransparentDelegate {

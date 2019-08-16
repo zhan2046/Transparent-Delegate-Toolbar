@@ -1,8 +1,5 @@
 package zhan.transparent;
 
-/**
- * Created by zhan on 2017/2/13.
- */
 
 public interface ITransparentDelegate {
 
