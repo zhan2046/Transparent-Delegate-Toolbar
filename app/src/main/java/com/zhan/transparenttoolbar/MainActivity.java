@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,8 +15,6 @@ import zhan.transparent.widget.TransparentFrameLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-  private static final String TAG = MainActivity.class.getSimpleName();
-
   private TransparentFrameLayout mTransparentFrameLayout;
   private RecyclerView mRecyclerView;
   private TextView numTv;
@@ -23,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
   private ImageView picIv;
   private TextView titleTv;
   private View line;
-
-  private MyAdapter mMyAdapter;
 
   private int mDy;
 
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
     mRecyclerView.setLayoutManager(manager);
 
-    mMyAdapter = new MyAdapter();
+    MyAdapter mMyAdapter = new MyAdapter();
     mRecyclerView.setAdapter(mMyAdapter);
 
     mTransparentFrameLayout.setColorToBackGround(getResources().getColor(R.color.colorPrimary));
@@ -50,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
   private void initListener() {
     mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-      @Override public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+      @Override public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
         super.onScrolled(recyclerView, dx, dy);
         mDy += dy;
         mTransparentFrameLayout.updateTop(mDy);
@@ -83,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void initView() {
-    mTransparentFrameLayout = (TransparentFrameLayout) findViewById(R.id.tool_bar);
-    mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-    numTv = (TextView) findViewById(R.id.num_tv);
-    titleTv = (TextView) findViewById(R.id.title_tv);
-    picIv = (ImageView) findViewById(R.id.pic_iv);
+    mTransparentFrameLayout = findViewById(R.id.tool_bar);
+    mRecyclerView = findViewById(R.id.recycler_view);
+    numTv = findViewById(R.id.num_tv);
+    titleTv = findViewById(R.id.title_tv);
+    picIv = findViewById(R.id.pic_iv);
     line = findViewById(R.id.line);
   }
 }

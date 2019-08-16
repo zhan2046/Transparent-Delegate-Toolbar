@@ -3,6 +3,7 @@ package com.zhan.transparenttoolbar;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -40,7 +41,8 @@ public class MyAdapter extends RecyclerView.Adapter {
     return TYPE_NORMAL;
   }
 
-  @Override public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+  @NonNull
+  @Override public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
     if (TYPE_HEADER == viewType) {
       return new MyHeaderHolder(
           LayoutInflater.from(parent.getContext()).inflate(R.layout.header, parent, false));
@@ -49,7 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter {
         LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false));
   }
 
-  @Override public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+  @Override public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
     int viewType = getItemViewType(position);
     if (TYPE_HEADER == viewType) {
       ((MyHeaderHolder) holder).bind();
