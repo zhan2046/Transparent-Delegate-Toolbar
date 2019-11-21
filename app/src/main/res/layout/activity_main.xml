@@ -44,7 +44,6 @@
                     android:visibility="gone" />
             </LinearLayout>
 
-
             <View
                 android:id="@+id/line"
                 android:layout_width="match_parent"
@@ -52,15 +51,17 @@
                 android:layout_alignParentBottom="true"
                 android:background="#FF333333"
                 android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:maxLength="6"
+                android:layout_marginRight="16dp"
+                android:textColor="#99FFFFFF"
+                android:textSize="12sp" />
         </RelativeLayout>
     </zhan.transparent.widget.TransparentFrameLayout>
-
-    <TextView
-        android:id="@+id/num_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:maxLength="6"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp" />
 </RelativeLayout>

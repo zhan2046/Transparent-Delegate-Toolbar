@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
             @SuppressLint("SetTextI18n")
             override fun onTransparentUpdateFraction(fraction: Float) {  //scrolling...
-                num_tv.text = (fraction * 100).toString() + "%"
+                num_tv.text = (fraction * 100).toInt().toString() + "%"
                 if (title_tv.visibility == View.VISIBLE && fraction < 1) {
                     title_tv.visibility = View.GONE
                     pic_iv.visibility = View.GONE
