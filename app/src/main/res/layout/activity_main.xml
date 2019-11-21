@@ -4,12 +4,10 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent" />
 
     <zhan.transparent.widget.TransparentFrameLayout
         android:id="@+id/tool_bar"
@@ -18,56 +16,51 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_centerInParent="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/pic_iv"
-                    android:visibility="gone"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/avatar"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    />
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/avatar"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/title_tv"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/white"
-                    android:text="smile"
-                    android:visibility="gone"
-                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    />
+                    android:layout_marginLeft="10dp"
+                    android:text="smile"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
             </LinearLayout>
-
 
 
             <View
                 android:id="@+id/line"
-                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
                 android:layout_alignParentBottom="true"
                 android:background="#FF333333"
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"/>
+                android:visibility="gone" />
         </RelativeLayout>
     </zhan.transparent.widget.TransparentFrameLayout>
 
     <TextView
         android:id="@+id/num_tv"
-        android:textSize="30sp"
-        android:maxLength="6"
-        android:textColor="@color/colorPrimary"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:layout_centerInParent="true"
+        android:maxLength="6"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
 </RelativeLayout>
